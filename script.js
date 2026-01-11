@@ -30,9 +30,12 @@ window.addEventListener("resize", () => {
 });
 
 // === Suara klik jika diaktifkan ===
-const clickSound = document.getElementById("click-sound");
+const music = document.getElementById("bg-music");
 
-function playClick() {
-  clickSound.currentTime = 0;
-  clickSound.play();
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
 }
