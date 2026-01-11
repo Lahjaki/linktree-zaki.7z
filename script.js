@@ -30,10 +30,9 @@ window.addEventListener("resize", () => {
 });
 
 // === Suara klik jika diaktifkan ===
-const sound = document.getElementById("click-sound");
-document.querySelectorAll(".links a").forEach(link => {
-  link.addEventListener("click", () => {
-    sound.currentTime = 0;
-    sound.play();
-  });
-});
+const clickSound = document.getElementById("click-sound");
+
+function playClick() {
+  clickSound.currentTime = 0;
+  clickSound.play();
+}
